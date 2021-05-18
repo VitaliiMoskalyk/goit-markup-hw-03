@@ -1,0 +1,164 @@
+/*Задаю переменные основных цветов сайта*/
+:root {
+  --main-text-color: #212121;
+  --active-buttons-color: #2196f3;
+  --logo-color: #000000;
+  --contacts-header-color: #757575;
+  --buttons-color: #f5f4fa;
+  --active-buttons-txt-color: #ffffff;
+  --footer-color: #2f303a;
+}
+
+/*Глобальный стиль для всего сайта*/
+
+body {
+  font-family: Roboto, Geneva, normal;
+  color: var(--main-text-color);
+}
+
+/*Оформление логотипа сайта*/
+
+.logo {
+  font-family: Raleway, normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--logo-color);
+}
+.three-letters-of-logo {
+  color: var(--active-buttons-color);
+}
+
+/*П О Р Т Ф О Л И О*/
+
+/*Оформление ссылок,почты и тел. в хэдере сайта*/
+.menu-nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+  cursor: pointer;
+}
+
+.menu-nav-link:focus,
+.menu-nav-link:hover {
+  color: var(--active-buttons-color);
+}
+
+.menu-nav-contacts {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--contacts-header-color);
+}
+
+/*Оформление кнопок для сортировки портфолио работ*/
+.menu-nav-link-sort {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  background-color: var(--buttons-color);
+  border: none;
+  cursor: pointer;
+}
+.menu-nav-link-sort:hover,
+.menu-nav-link-sort:focus {
+  color: var(--active-buttons-txt-color);
+  background-color: var(--active-buttons-color);
+}
+
+/*Оформление стилей списка  работ портфолио*/
+.portfolio-title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-title-type {
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  color: var(--contacts-header-color);
+}
+/*Footer*/
+/*другой цвет лого в футере*/
+.footer-color {
+  background-color: var(--footer-color);
+}
+
+.negative {
+  color: var(--active-buttons-txt-color);
+}
+
+.adress-footer {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--active-buttons-txt-color);
+}
+.contacts-footer {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/*С Т У Д И Я */
+
+/*Герой*/
+.main-title-studio {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--active-buttons-txt-color);
+  background-color: #2f303a; /*цвет задан для наглядности шрифта*/
+  text-transform: uppercase;
+}
+/*Наши качества*/
+.quality {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.quality-item {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--contacts-header-color);
+}
+
+/*Чем мы занимаемся*/
+.main-site-sections {
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+/*Наша команда*/
+.name {
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+}
+.proffession-name {
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: var(--contacts-header-color);
+}
