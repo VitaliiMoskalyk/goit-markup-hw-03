@@ -1,4 +1,5 @@
 /*Задаю переменные основных цветов сайта*/
+
 :root {
   --main-text-color: #212121;
   --active-buttons-color: #2196f3;
@@ -7,6 +8,39 @@
   --buttons-color: #f5f4fa;
   --active-buttons-txt-color: #ffffff;
   --footer-color: #2f303a;
+  --background-grey: #e5e5e5;
+}
+
+/*Lists global settings*/
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/*паддинги внутри секций*/
+
+section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  /*outline: springgreen solid 2px;*/
+}
+
+/*обнуление верхнего паддинга секций*/
+
+.padding-null {
+  padding-top: 0;
+}
+.hero {
+  padding: 0;
+  background: var(--footer-color);
 }
 
 /*Глобальный стиль для всего сайта*/
@@ -14,7 +48,19 @@
 body {
   font-family: Roboto, Geneva, normal;
   color: var(--main-text-color);
+  width: 1600px;
 }
+/*Summary class*/
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  /*outline: tomato solid 2px;*/
+}
+/*Header of site*/
 
 /*Оформление логотипа сайта*/
 
@@ -31,9 +77,26 @@ body {
   color: var(--active-buttons-color);
 }
 
-/*П О Р Т Ф О Л И О*/
-
 /*Оформление ссылок,почты и тел. в хэдере сайта*/
+
+.header-flex {
+  display: flex;
+  align-items: center;
+}
+.menu-navigation {
+  display: flex;
+}
+.menu-nav-conteiner {
+  display: flex;
+  margin-left: 93px;
+}
+.menu-nav-conteiner .item:not(:last-child) {
+  margin-right: 50px;
+}
+.menu-nav-conteiner.second {
+  margin-left: 331px;
+}
+
 .menu-nav-link {
   font-weight: 500;
   font-size: 14px;
@@ -42,10 +105,14 @@ body {
   letter-spacing: 0.02em;
   color: var(--main-text-color);
   cursor: pointer;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .menu-nav-link:focus,
-.menu-nav-link:hover {
+.menu-nav-link:hover,
+.visited {
   color: var(--active-buttons-color);
 }
 
@@ -55,9 +122,16 @@ body {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--contacts-header-color);
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
+/*П О Р Т Ф О Л И О*/
+
 /*Оформление кнопок для сортировки портфолио работ*/
+
 .menu-nav-link-sort {
   font-family: Roboto;
   font-weight: 500;
@@ -65,10 +139,14 @@ body {
   border-radius: 4px;
   line-height: 1.6;
   letter-spacing: 0.03em;
+
+  padding: 6px 22px;
+
   background-color: var(--buttons-color);
   border: none;
   cursor: pointer;
 }
+.blue,
 .menu-nav-link-sort:hover,
 .menu-nav-link-sort:focus {
   color: var(--active-buttons-txt-color);
@@ -85,23 +163,32 @@ body {
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.03em;
+
   color: var(--contacts-header-color);
 }
 /*Footer*/
 /*другой цвет лого в футере*/
 .footer-color {
   background-color: var(--footer-color);
+
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .negative {
   color: var(--active-buttons-txt-color);
 }
-
+address {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+}
 .adress-footer {
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+
   color: var(--active-buttons-txt-color);
 }
 .contacts-footer {
@@ -109,28 +196,54 @@ body {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+
   color: rgba(255, 255, 255, 0.6);
+
+  margin-top: 9px;
 }
 
 /*С Т У Д И Я */
 
 /*Герой*/
+
+.hero .container {
+  padding-top: 195px;
+  padding-bottom: 285px;
+  text-align: center;
+}
+
 .main-title-studio {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  margin-bottom: 30px;
+
   color: var(--active-buttons-txt-color);
-  background-color: #2f303a; /*цвет задан для наглядности шрифта*/
-  text-transform: uppercase;
 }
 /*Наши качества*/
+.items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.items-of-section:not(:last-child) {
+  margin-right: 30px;
+}
+.items-of-section {
+  flex-basis: calc(100% / 4 - 30px);
+  padding: 3px;
+}
+
 .quality {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  margin-bottom: 10px;
 }
 
 .quality-item {
@@ -139,6 +252,7 @@ body {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+
   color: var(--contacts-header-color);
 }
 
@@ -147,6 +261,16 @@ body {
   font-size: 36px;
   line-height: 1.2;
   letter-spacing: 0.03em;
+
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.items-of-mainsite:not(:last-child) {
+  margin-right: 30px;
+}
+.items-of-mainsite {
+  flex-basis: calc(100% / 3 - 20px);
 }
 
 /*Наша команда*/
@@ -155,10 +279,36 @@ body {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.03em;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .proffession-name {
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
+
   color: var(--contacts-header-color);
+
+  margin-bottom: 30px;
 }
+
+.items-of-section-people:not(:last-child) {
+  margin-right: 30px;
+  flex-wrap: wrap;
+}
+.items-of-section-people {
+  flex-basis: calc(100% / 4 - 30px);
+
+  background-color: var(--active-buttons-txt-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  text-align: center;
+}
+
+.backColGrey {
+  background-color: var(--buttons-color);
+}
+/*Stilization geometry of content*/
