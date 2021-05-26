@@ -3,6 +3,7 @@
 :root {
   --main-text-color: #212121;
   --active-buttons-color: #2196f3;
+  --hover-button-color: #188ce8;
   --logo-color: #000000;
   --contacts-header-color: #757575;
   --buttons-color: #f5f4fa;
@@ -11,6 +12,7 @@
   --background-grey: #e5e5e5;
   --box-people-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --border-line: #ececec;
 }
 
 /*Lists global settings*/
@@ -46,7 +48,9 @@ p {
 section {
   padding-top: 94px;
   padding-bottom: 94px;
-
+  width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
   /*outline: springgreen solid 2px;*/
 }
 
@@ -65,9 +69,6 @@ section {
 body {
   font-family: Roboto, Geneva, normal;
   color: var(--main-text-color);
-  width: 1600px;
-  margin-right: auto;
-  margin-left: auto;
 }
 /*Summary class*/
 .container {
@@ -79,8 +80,12 @@ body {
 
   /*outline: tomato solid 2px;*/
 }
-/*Header of site*/
 
+/*Header of site*/
+section.site-header {
+  padding: 0;
+  border-bottom: 1px solid var(--border-line);
+}
 /*Оформление логотипа сайта*/
 
 .logo {
@@ -149,9 +154,7 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.border {
-  border-bottom: 1px solid #ececec;
-}
+
 /*П О Р Т Ф О Л И О*/
 
 /*Оформление кнопок для сортировки портфолио работ*/
@@ -189,6 +192,10 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+}
+.blue:hover,
+.blue:focus {
+  background-color: var(--hover-button-color);
 }
 
 /*Оформление стилей списка  работ портфолио*/
