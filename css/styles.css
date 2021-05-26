@@ -48,10 +48,9 @@ p {
 section {
   padding-top: 94px;
   padding-bottom: 94px;
+  min-width: 1200px;
 
-  margin-right: auto;
-  margin-left: auto;
-  /*outline: springgreen solid 2px;*/
+  /* outline: springgreen solid 2px;*/
 }
 
 /*обнуление верхнего паддинга секций*/
@@ -239,7 +238,7 @@ section.site-header {
 /*другой цвет лого в футере*/
 .footer-color {
   background-color: var(--footer-color);
-
+  min-width: 1200px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
